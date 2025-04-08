@@ -76,7 +76,7 @@ AI_Shopping_Jarvis/
 🧠 Built With
 💬 Flask
 
-🧠 OpenAI GPT
+🧠 Hugging Face
 
 🌐 Selenium Web Scraping
 
