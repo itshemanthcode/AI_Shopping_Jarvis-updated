@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Shopping Jarvis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛍️Hemanth"s AI Shopping Agent</h1>
+        <form method="POST">
+            <input type="text" name="query" id="query" placeholder="What do you want today?" required>
+            <button type="submit">Search</button>
+            <button type="button" onclick="startListening()">🎙️ Speak</button>
+        </form>
+
+        {% if summary %}
+            <div class="summary">
+                <h2>🧠 AI Insight:</h2>
+                <p>{{ summary }}</p>
+            </div>
+        {% endif %}
+
+        {% if products %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Buy Now</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in products %}
+                        <tr>
+                            <td>{{ p.platform }}</td>
+                            <td>{{ p.title }}</td>
+                            <td>{{ p.price }}</td>
+                            <td>⭐ {{ p.rating }}</td>
+                            <td><a href="{{ p.link }}" target="_blank">Buy Now</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+    <script src="/static/voice.js"></script>
+</body>
+</html>
