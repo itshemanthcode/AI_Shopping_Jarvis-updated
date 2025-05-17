@@ -90,7 +90,6 @@ s3transfer==0.10.3
 scikit-learn==1.6.1
 scipy==1.15.2
 selenium==4.31.0
-selinux @ file:///builddir/build/BUILD/libselinux-3.7-build/libselinux-3.7/src
 sentry-sdk==2.13.0
 sepolicy @ file:///builddir/build/BUILD/policycoreutils-3.7-build/selinux-3.7/python/sepolicy
 setools==4.5.1
